@@ -1,13 +1,12 @@
 import obd
 
 
-
 ports = obd.scan_serial()       # return list of valid USB or RF ports
 print("ports: ", ports)                    # ['/dev/ttyUSB0', '/dev/ttyUSB1']
 
 connection = obd.OBD() # auto-connects to USB or RF port
-
-#https://python-obd.readthedocs.io/en/latest/Command%20Tables/
+# all commands
+# https://python-obd.readthedocs.io/en/latest/Command%20Tables/
 
 cmd = obd.commands.RPM
 
